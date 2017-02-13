@@ -24,6 +24,12 @@ mySocket.listen(5)
 
 # Accept connections, read incoming data, and answer back an HTML page
 #  (in an infinite loop)
+# tenemos que convertir el string en bytes
+# la función bytes (string, 'codificacion') lo hace
+# HTML-->
+# <h1> es como head o algo así
+#<p> es parrafo (esa si xd)
+#<img src = 'url' width = ''> etc
 
 while True:
     print('Waiting for connections')
