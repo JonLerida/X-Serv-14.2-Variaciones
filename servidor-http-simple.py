@@ -30,8 +30,10 @@ while True:
     (recvSocket, address) = mySocket.accept()
     print('HTTP request received:')
     print(recvSocket.recv(1024))
-    recvSocket.send(bytes("HTTP/1.1 200 OK\r\n\r\n" +
-                    "<html><body><h1>Hello World!</h1></body></html>" +
-                    "\r\n", 'utf-8'))
+    recvSocket.send(bytes("HTTP/1.1 200 OK\r\n\r\n", 'utf-8') +
+                    bytes("<html><body><h1>Que pasa bros<3</h1></body></html>", 'utf-8') +
+                    bytes("<h1>Vamos a darle un poco a la programacion</h1>", 'utf-8')+
+                    bytes("<p><font size='10'>Os dejo un pengolin <p/>", 'utf-8')+
+                    bytes("<img src='https://assets.pcmag.com/media/images/532520-pangolin-v-day-google-doodle.jpg?thumb=y&width=810&height=455' width='810' height='455'>", 'utf-8')+
+                    bytes("\r\n", 'utf-8'))
     recvSocket.close()
-
