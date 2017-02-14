@@ -27,10 +27,11 @@ mySocket.listen(5)
 # tenemos que convertir el string en bytes
 # la función bytes (string, 'codificacion') lo hace
 # HTML-->
-# <h1> es como head o algo así
-#<p> es parrafo (esa si xd)
+# <h1> es como head o título
+#<p> es parrafo 
 #<img src = 'url' width = ''> etc
 
+#Devuelve un 200 OK y una imagen
 while True:
     print('Waiting for connections')
     (recvSocket, address) = mySocket.accept()
